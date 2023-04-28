@@ -68,7 +68,6 @@ public class ProductManager {
         List<Product> productList = null;
         try (ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream(productSourceFile))) {
             productList = (List<Product>) objectInputStream.readObject();
-//            System.out.println("Complete!");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
