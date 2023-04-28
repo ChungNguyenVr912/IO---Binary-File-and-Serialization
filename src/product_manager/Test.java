@@ -1,6 +1,7 @@
 package product_manager;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Test {
     public static void main(String[] args) {
@@ -16,5 +17,11 @@ public class Test {
         ProductManager.viewAllProduct();
         System.out.println(ProductManager.searchProduct(6));
         System.out.println(ProductManager.searchProduct(2));
+        Scanner scanner = new Scanner(System.in);
+        String continueComfirm;
+        do {
+            System.out.println("Continue?");
+            continueComfirm = scanner.next();
+        }while(!continueComfirm.equalsIgnoreCase("no"));
     }
 }
